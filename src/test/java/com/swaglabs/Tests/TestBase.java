@@ -60,10 +60,11 @@ public class TestBase  {
                 new Object[]{"internet explorer", "11.0", "Windows 7"},
                 new Object[]{"safari", "9.0", "OS X 10.11"},
                 new Object[]{"chrome", "54.0", "OS X 10.10"},
-                new Object[]{"firefox", "latest-1", "Windows 7"},
+                new Object[]{"firefox", "latest-1", "Windows 8.1"},
                 new Object[]{"firefox", "latest", "Windows 10"},
                 new Object[]{"firefox", "latest", "OS X 10.11"},
                 new Object[]{"chrome", "latest", "OS X 10.11"},
+                new Object[]{"chrome", "latest-2", "OS X 10.11"},
         };
     }
 
