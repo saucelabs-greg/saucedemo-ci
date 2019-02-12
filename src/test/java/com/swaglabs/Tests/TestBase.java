@@ -71,7 +71,7 @@ public class TestBase {
             new Object[]{"firefox", "latest", "OS X 10.11"},
             new Object[]{"chrome", "latest", "OS X 10.11"},
             new Object[]{"chrome", "latest-1", "OS X 10.11"},
-//            new Object[]{"chrome", "latest-2", "OS X 10.11"},
+            new Object[]{"chrome", "latest-2", "OS X 10.11"},
         };
     }
 
