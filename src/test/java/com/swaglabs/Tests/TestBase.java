@@ -23,11 +23,12 @@ import java.net.URL;
 import java.rmi.UnexpectedException;
 
 /**
- * Simple TestNG test which demonstrates being instantiated via a DataProvider in order to supply multiple browser combinations.
+ * Simple TestNG test which demonstrates being instantiated via a DataProvider
+ * in order to supply multiple browser combinations.
  *
  * @author Shadab Siddiqui
  */
-public class TestBase  {
+public class TestBase {
 
     public String buildTag = System.getenv("BUILD_TAG");
 
@@ -35,9 +36,9 @@ public class TestBase  {
 
     public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
 
-
     /**
-     * ThreadLocal variable which contains the  {@link WebDriver} instance which is used to perform browser interactions with.
+     * ThreadLocal variable which contains the {@link WebDriver} instance which
+     * is used to perform browser interactions with.
      */
     private ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
 
@@ -50,21 +51,27 @@ public class TestBase  {
      * DataProvider that explicitly sets the browser combinations to be used.
      *
      * @param testMethod
-     * @return Two dimensional array of objects with browser, version, and platform information
+     * @return Two dimensional array of objects with browser, version, and
+     * platform information
      */
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
-                new Object[]{"MicrosoftEdge", "16.16299", "Windows 10"},
-                new Object[]{"firefox", "65.0", "Windows 10"},
-                new Object[]{"internet explorer", "11.0", "Windows 7"},
-                new Object[]{"safari", "9.0", "OS X 10.11"},
-                new Object[]{"chrome", "54.0", "OS X 10.10"},
-                new Object[]{"firefox", "latest-1", "Windows 8.1"},
-                new Object[]{"firefox", "latest", "Windows 10"},
-                new Object[]{"firefox", "latest", "OS X 10.11"},
-                new Object[]{"chrome", "latest", "OS X 10.11"},
-                new Object[]{"chrome", "latest-2", "OS X 10.11"},
+            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
+            new Object[]{"firefox", "latest", "Windows 10"},
+            new Object[]{"firefox", "latest-1", "Windows 10"},
+            //                new Object[]{"internet explorer", "11.0", "Windows 7"},
+            new Object[]{"safari", "latest", "OS X 10.11"},
+            new Object[]{"safari", "latest-1", "OS X 10.11"},
+            new Object[]{"chrome", "latest", "OS X 10.10"},
+            new Object[]{"chrome", "latest-1", "OS X 10.10"},
+            new Object[]{"firefox", "latest-1", "Windows 8.1"},
+            new Object[]{"firefox", "latest", "Windows 10"},
+            new Object[]{"firefox", "latest", "OS X 10.11"},
+            new Object[]{"chrome", "latest", "OS X 10.11"},
+            new Object[]{"chrome", "latest-1", "OS X 10.11"},
+//            new Object[]{"chrome", "latest-2", "OS X 10.11"},
         };
     }
 
@@ -84,14 +91,19 @@ public class TestBase  {
     }
 
     /**
-     * Constructs a new {@link RemoteWebDriver} instance which is configured to use the capabilities defined by the browser,
-     * version and os parameters, and which is configured to run against ondemand.saucelabs.com, using
-     * the username and access key populated by the {@link #authentication} instance.
+     * Constructs a new {@link RemoteWebDriver} instance which is configured to
+     * use the capabilities defined by the browser, version and os parameters,
+     * and which is configured to run against ondemand.saucelabs.com, using the
+     * username and access key populated by the {@link #authentication}
+     * instance.
      *
      * @param browser Represents the browser to be used as part of the test run.
-     * @param version Represents the version of the browser to be used as part of the test run.
-     * @param os Represents the operating system to be used as part of the test run.
-     * @param methodName Represents the name of the test case that will be used to identify the test on Sauce.
+     * @param version Represents the version of the browser to be used as part
+     * of the test run.
+     * @param os Represents the operating system to be used as part of the test
+     * run.
+     * @param methodName Represents the name of the test case that will be used
+     * to identify the test on Sauce.
      * @return
      * @throws MalformedURLException if an error occurs parsing the url
      */
@@ -122,12 +134,10 @@ public class TestBase  {
     }
 
     /**
-     * Method that gets invoked after test.
-     * Dumps browser log and
-     * Closes the browser
+     * Method that gets invoked after test. Dumps browser log and Closes the
+     * browser
      */
-    
-	@AfterMethod
+    @AfterMethod
     public void tearDown(ITestResult result) throws Exception {
         ((JavascriptExecutor) webDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
         webDriver.get().quit();

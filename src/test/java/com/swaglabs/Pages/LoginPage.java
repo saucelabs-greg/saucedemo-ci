@@ -61,17 +61,18 @@ public class LoginPage {
     }
     
     public boolean verifyLoginPage() {
-    	WebDriverWait wait = new WebDriverWait(driver, 30);
+    	WebDriverWait wait = new WebDriverWait(driver, 20);
     	wait.until(ExpectedConditions.visibilityOf(loginButton));
     	//System.out.println("Value is: "+loginButton.getText());
         return true;
     }
     
     public String verifyLockedOutMessage() {
-    	WebDriverWait wait = new WebDriverWait(driver, 30);
+    	WebDriverWait wait = new WebDriverWait(driver, 20);
     	wait.until(ExpectedConditions.visibilityOf(lockedOutMessage));
     	//System.out.println(lockedOutMessage.getText());
         return lockedOutMessage.getText();
     }
 
 }
+
