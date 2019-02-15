@@ -44,7 +44,7 @@ public class CompleteOrder extends TestBase {
         this.createDriver(browser, version, os, method.getName());
         WebDriver driver = this.getWebDriver();
         
-        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(35, TimeUnit.SECONDS);
   	    driver.manage().window().maximize();
 
         this.annotate("Visiting Swag Labs Login page...");
@@ -117,3 +117,4 @@ public class CompleteOrder extends TestBase {
     }
 
 }
+
