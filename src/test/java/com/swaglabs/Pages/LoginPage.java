@@ -73,6 +73,13 @@ public class LoginPage {
     	//System.out.println(lockedOutMessage.getText());
         return lockedOutMessage.getText();
     }
+    
+    public String verifyLoginCredentialsText() {
+    	WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.visibilityOf(loginCredentials));
+        return loginCredentials.getText();        
+    }
 
 }
+
 
