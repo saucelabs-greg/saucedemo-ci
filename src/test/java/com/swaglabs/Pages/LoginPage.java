@@ -22,7 +22,8 @@ public class LoginPage {
     @FindBy(xpath = "//h3[@data-test='error']")
     private WebElement lockedOutMessage; 
     
-    @FindBy(xpath = "//pre[@id='login_credentials']")
+//    @FindBy(xpath = "//pre[@id='login_credentials']")
+    @FindBy(xpath = "//pre[@id='login_credential']")
     private WebElement loginCredentials; 
     
   
@@ -81,5 +82,6 @@ public class LoginPage {
     }
 
 }
+
 
 
