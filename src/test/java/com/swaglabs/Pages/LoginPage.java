@@ -10,7 +10,7 @@ public class LoginPage {
 
     
     
-    @FindBy(xpath = "//input[@placeholder='Username']")
+    @FindBy(xpath = "//input[@placeholder='Usename']")
     private WebElement usernameTextBox;
 
     @FindBy(xpath = "//input[@placeholder='Password']")
@@ -22,8 +22,7 @@ public class LoginPage {
     @FindBy(xpath = "//h3[@data-test='error']")
     private WebElement lockedOutMessage; 
     
-//    @FindBy(xpath = "//pre[@id='login_credentials']")
-    @FindBy(xpath = "//pre[@id='login_credential']")
+    @FindBy(xpath = "//pre[@id='login_credentials']")
     private WebElement loginCredentials; 
     
   
@@ -82,6 +81,9 @@ public class LoginPage {
     }
 
 }
+
+
+
 
 
 
