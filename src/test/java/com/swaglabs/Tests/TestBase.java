@@ -117,12 +117,16 @@ public class TestBase {
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
         capabilities.setCapability("extendedDebugging", true);
-        capabilities.setCapability("avoidProxy", true);
+        capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
+//        capabilities.setCapability("avoidProxy", true);
 
+
+        //Getting the build name.
+        //Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
         if (buildTag != null) {
             capabilities.setCapability("build", buildTag);
         }
-
+       
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
                 new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
