@@ -6,7 +6,7 @@
     <groupId>com.swaglabs</groupId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Sauce Cart Demo</name>
+    <name>Jenkins TestNG - Sauce Cart Demo</name>
     <description>A sample Maven project that demonstrates how to integrate Sauce OnDemand with WebDriver tests
         that run using TestNG
     </description>
