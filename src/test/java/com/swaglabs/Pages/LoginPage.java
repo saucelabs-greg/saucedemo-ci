@@ -10,7 +10,8 @@ public class LoginPage {
 
     
     
-    @FindBy(xpath = "//input[@placeholder='Usename']")
+//    @FindBy(xpath = "//input[@placeholder='Usename']") // enable to make tests fail
+    @FindBy(xpath = "//input[@placeholder='Username']") // enable to have tests pass
     private WebElement usernameTextBox;
 
     @FindBy(xpath = "//input[@placeholder='Password']")
@@ -81,6 +82,8 @@ public class LoginPage {
     }
 
 }
+
+
 
 
 
