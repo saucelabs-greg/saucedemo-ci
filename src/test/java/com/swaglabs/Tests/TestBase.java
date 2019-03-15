@@ -1,12 +1,5 @@
 package com.swaglabs.Tests;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterMethod;
-import com.saucelabs.common.SauceOnDemandAuthentication;
-import com.saucelabs.common.SauceOnDemandSessionIdProvider;
-import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
-import com.saucelabs.testng.SauceOnDemandTestListener;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -15,8 +8,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
-
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
