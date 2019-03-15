@@ -143,12 +143,6 @@ public class TestBase {
      * browser
      */
     @AfterMethod
-    private void printSessionId() {
-    String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-    ((RemoteWebDriver) getWebDriver()).getSessionId().toString(), System.getenv("JOB_NAME"));
-    System.out.println(message);
-} 
-    
     public void tearDown(ITestResult result) throws Exception {
         ((JavascriptExecutor) webDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
         webDriver.get().quit();
