@@ -116,6 +116,7 @@ public class TestBase {
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
         capabilities.setCapability("extendedDebugging", true);
+        capabilities.setCapability("capturePerformance", true);
         capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
 //        capabilities.setCapability("avoidProxy", true);
 
