@@ -55,7 +55,7 @@ public class TestBase {
      * platform information
      */
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
-    JSONObject
+    // JSONObject
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
             // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
