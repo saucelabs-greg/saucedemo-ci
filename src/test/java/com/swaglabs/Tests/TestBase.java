@@ -62,7 +62,7 @@ public class TestBase {
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
             // new Object[]{"firefox", "latest", "Windows 10"},
             // new Object[]{"firefox", "latest-1", "Windows 10"},
-            new Object[]{System.getenv("SELENIUM_BROWSER"), System.getenv("SELENIUM_VERSION"), System.getenv("SELENIUM_PLATFORM"},
+            new Object[]{System.getenv("SELENIUM_BROWSER"), System.getenv("SELENIUM_VERSION"), System.getenv("SELENIUM_PLATFORM")},
             // new Object[]{"internet explorer", "11.0", "Windows 7"},
             // new Object[]{"safari", "latest", "OS X 10.11"},
             // new Object[]{"safari", "latest-1", "OS X 10.11"},
