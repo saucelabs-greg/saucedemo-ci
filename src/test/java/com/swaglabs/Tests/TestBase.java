@@ -57,20 +57,21 @@ public class TestBase {
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
-            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
-            new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
-            new Object[]{"firefox", "latest", "Windows 10"},
-            new Object[]{"firefox", "latest-1", "Windows 10"},
-            new Object[]{"internet explorer", "11.0", "Windows 7"},
+            // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            // new Object[]{SauceOnDemandTestListener, Sauce},
+            // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
+            // new Object[]{"firefox", "latest", "Windows 10"},
+            // new Object[]{"firefox", "latest-1", "Windows 10"},
+            // new Object[]{"internet explorer", "11.0", "Windows 7"},
             // new Object[]{"safari", "latest", "OS X 10.11"},
-            new Object[]{"safari", "latest-1", "OS X 10.11"},
-            new Object[]{"chrome", "latest", "OS X 10.10"},
+            // new Object[]{"safari", "latest-1", "OS X 10.11"},
+            // new Object[]{"chrome", "latest", "OS X 10.10"},
             // new Object[]{"chrome", "latest-1", "OS X 10.10"},
             // new Object[]{"firefox", "latest-1", "Windows 8.1"},
-            new Object[]{"firefox", "latest", "Windows 10"},
-            new Object[]{"firefox", "latest", "OS X 10.11"},
-            new Object[]{"chrome", "latest", "OS X 10.11"},
-            new Object[]{"chrome", "latest-1", "OS X 10.11"}, //            new Object[]{"chrome", "latest-2", "OS X 10.11"},
+            // new Object[]{"firefox", "latest", "Windows 10"},
+            // new Object[]{"firefox", "latest", "OS X 10.11"},
+            // new Object[]{"chrome", "latest", "OS X 10.11"},
+            // new Object[]{"chrome", "latest-1", "OS X 10.11"}, //            new Object[]{"chrome", "latest-2", "OS X 10.11"},
         };
     }
 
@@ -112,7 +113,7 @@ public class TestBase {
 
         // set desired capabilities to launch appropriate browser on Sauce
         capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
-        capabilities.setCapability(CapabilityType.VERSION, version);
+        // capabilities.setCapability(CapabilityType.VERSION, version);
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
         capabilities.setCapability("extendedDebugging", true);
@@ -125,7 +126,7 @@ public class TestBase {
         if (buildTag != null) {
             capabilities.setCapability("build", buildTag);
         }
-
+        System.out.println(capabilities);
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
                 new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
