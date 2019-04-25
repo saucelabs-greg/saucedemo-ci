@@ -55,25 +55,24 @@ public class TestBase {
      * platform information
      */
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
-    // JSONObject
+    Object obj = new JSONParser().parse(System.getenv(SAUCE_ONDEMAND_BROWSERS));
+    JSONObject jenkinsBrowsers =
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
-            // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
-            // // new Object[]{SauceOnDemandTestListener, Sauce},
-            // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
-            // new Object[]{"firefox", "latest", "Windows 10"},
-            // new Object[]{"firefox", "latest-1", "Windows 10"},
-            new Object[]{System.getenv(SAUCE_ONDEMAND_BROWSERS[0]["browser"]), System.getenv(SAUCE_ONDEMAND_BROWSERS[0]["browserVersion"]), System.getenv(SAUCE_ONDEMAND_BROWSERS[0]["os"])},
-            // new Object[]{"internet explorer", "11.0", "Windows 7"},
-            // new Object[]{"safari", "latest", "OS X 10.11"},
-            // new Object[]{"safari", "latest-1", "OS X 10.11"},
-            // new Object[]{"chrome", "latest", "OS X 10.10"},
-            // new Object[]{"chrome", "latest-1", "OS X 10.10"},
-            // new Object[]{"firefox", "latest-1", "Windows 8.1"},
-            // new Object[]{"firefox", "latest", "Windows 10"},
-            // new Object[]{"firefox", "latest", "OS X 10.11"},
-            // new Object[]{"chrome", "latest", "OS X 10.11"},
-            // new Object[]{"chrome", "latest-1", "OS X 10.11"}, //            new Object[]{"chrome", "latest-2", "OS X 10.11"},
+            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
+            new Object[]{"firefox", "latest", "Windows 10"},
+            new Object[]{"firefox", "latest-1", "Windows 10"},
+            new Object[]{"internet explorer", "11.0", "Windows 7"},
+            new Object[]{"safari", "latest", "OS X 10.11"},
+            new Object[]{"safari", "latest-1", "OS X 10.11"},
+            new Object[]{"chrome", "latest", "OS X 10.10"},
+            new Object[]{"chrome", "latest-1", "OS X 10.10"},
+            new Object[]{"firefox", "latest-1", "Windows 8.1"},
+            new Object[]{"firefox", "latest", "Windows 10"},
+            new Object[]{"firefox", "latest", "OS X 10.11"},
+            new Object[]{"chrome", "latest", "OS X 10.11"},
+            new Object[]{"chrome", "latest-1", "OS X 10.11"}, //            new Object[]{"chrome", "latest-2", "OS X 10.11"},
         };
     }
 
