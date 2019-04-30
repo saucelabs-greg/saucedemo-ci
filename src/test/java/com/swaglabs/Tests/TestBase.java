@@ -55,8 +55,6 @@ public class TestBase {
      * platform information
      */
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
-    Object obj = new JSONParser().parse(System.getenv(SAUCE_ONDEMAND_BROWSERS));
-    JSONObject jenkinsBrowsers =
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
             new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
@@ -119,6 +117,7 @@ public class TestBase {
         capabilities.setCapability("name", methodName);
         capabilities.setCapability("extendedDebugging", true);
         capabilities.setCapability("capturePerformance", true);
+        // capabilities.setCapability("tunnelIdentifier", "allTheTests");
         capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
 //        capabilities.setCapability("avoidProxy", true);
 
