@@ -85,9 +85,9 @@ public class TestBase {
      *
      * @return the Sauce Job id for the current thread
      */
-    public String getSessionId() {
-        return sessionId.get();
-    }
+    // public String getSessionId() {
+    //     return sessionId.get();
+    // }
 
     /**
      * Constructs a new {@link RemoteWebDriver} instance which is configured to
@@ -133,7 +133,7 @@ public class TestBase {
                 capabilities));
 
         // set current sessionId
-        String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+        // String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
         // sessionId.set(id);
        // String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
        //         sessionId, System.getenv("JOB_NAME"));
