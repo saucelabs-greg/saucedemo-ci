@@ -141,9 +141,9 @@ public class TestBase {
 
         //Getting the build name.
         // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
-        if (buildTag != null) {
-            capabilities.setCapability("build", buildTag);
-        }
+        // if (buildTag != null) {
+        //     capabilities.setCapability("build", buildTag);
+        // }
         System.out.println(capabilities);
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
