@@ -152,9 +152,9 @@ public class TestBase {
         // set current sessionId
         String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
         sessionId.set(id);
-       // String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-       //         sessionId, System.getenv("JOB_NAME"));
-       // System.out.println(message);
+       String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+               sessionId, System.getenv("JOB_NAME"));
+       System.out.println(message);
     }
 
     /**
