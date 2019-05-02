@@ -21,6 +21,8 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.UnexpectedException;
+import java.sql.Timestamp;
+import java.time.Instant;
 
 /**
  * Simple TestNG test which demonstrates being instantiated via a DataProvider
@@ -30,12 +32,17 @@ import java.rmi.UnexpectedException;
  */
 public class TestBase {
 
-    public String buildTag = System.getenv("BUILD_TAG");
+    // public String buildTag = System.getenv("BUILD_TAG");
+
+    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
+    public String buildTag = "TestNGSwagLabs " + timestamp;
 
     public String username = System.getenv("SAUCE_USERNAME");
 
     public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
 
+// public String accesskey = System.getenv("ba4d50e2-766f-4c71-a9e6-2b9abde028b4");
     /**
      * ThreadLocal variable which contains the {@link WebDriver} instance which
      * is used to perform browser interactions with.
@@ -57,20 +64,28 @@ public class TestBase {
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
-            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
-            new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
-            new Object[]{"firefox", "latest", "Windows 10"},
-            new Object[]{"firefox", "latest-1", "Windows 10"},
-            new Object[]{"internet explorer", "11.0", "Windows 7"},
-            new Object[]{"safari", "latest", "OS X 10.11"},
-            new Object[]{"safari", "latest-1", "OS X 10.11"},
-            new Object[]{"chrome", "latest", "OS X 10.10"},
-            new Object[]{"chrome", "latest-1", "OS X 10.10"},
-            new Object[]{"firefox", "latest-1", "Windows 8.1"},
-            new Object[]{"firefox", "latest", "Windows 10"},
-            new Object[]{"firefox", "latest", "OS X 10.11"},
-            new Object[]{"chrome", "latest", "OS X 10.11"},
-            new Object[]{"chrome", "latest-1", "OS X 10.11"}, //            new Object[]{"chrome", "latest-2", "OS X 10.11"},
+            // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
+            // new Object[]{"firefox", "latest", "Windows 10"},
+            // new Object[]{"firefox", "latest-1", "Windows 10"},
+            // new Object[]{"internet explorer", "11.0", "Windows 7"},
+            // new Object[]{"safari", "latest", "OS X 10.11"},
+            // new Object[]{"safari", "latest-1", "OS X 10.11"},
+            // new Object[]{"chrome", "latest", "OS X 10.10"},
+            // new Object[]{"chrome", "latest-1", "OS X 10.10"},
+            // new Object[]{"firefox", "latest-1", "Windows 8.1"},
+            // new Object[]{"firefox", "latest", "Windows 10"},
+            // new Object[]{"firefox", "latest", "OS X 10.11"},
+            // new Object[]{"chrome", "latest", "OS X 10.11"},
+            // new Object[]{"chrome", "latest-1", "OS X 10.11"}, //            new Object[]{"chrome", "latest-2", "OS X 10.11"},
+
+            // these are headless only
+            new Object[]{"firefox", "latest", "Linux"},
+            new Object[]{"firefox", "latest-1", "Linux"},
+            new Object[]{"firefox", "latest-2", "Linux"},
+            new Object[]{"chrome", "latest", "Linux"},
+            new Object[]{"chrome", "latest-1", "Linux"},
+            new Object[]{"chrome", "latest-2", "Linux"},
         };
     }
 
@@ -85,9 +100,9 @@ public class TestBase {
      *
      * @return the Sauce Job id for the current thread
      */
-    // public String getSessionId() {
-    //     return sessionId.get();
-    // }
+    public String getSessionId() {
+        return sessionId.get();
+    }
 
     /**
      * Constructs a new {@link RemoteWebDriver} instance which is configured to
@@ -115,14 +130,15 @@ public class TestBase {
         // capabilities.setCapability(CapabilityType.VERSION, version);
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
-        capabilities.setCapability("extendedDebugging", true);
-        capabilities.setCapability("capturePerformance", true);
+        // capabilities.setCapability("extendedDebugging", true);
+        // capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTests");
-        capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
+        // capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
+        // capabilities.setCapability("build", "standardVMvsHeadless");
 //        capabilities.setCapability("avoidProxy", true);
 
         //Getting the build name.
-        //Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
+        // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
         if (buildTag != null) {
             capabilities.setCapability("build", buildTag);
         }
@@ -130,11 +146,12 @@ public class TestBase {
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
                 new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
+                // new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), //app.us-east-1.saucelabs.com
                 capabilities));
 
         // set current sessionId
-        // String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
-        // sessionId.set(id);
+        String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+        sessionId.set(id);
        // String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
        //         sessionId, System.getenv("JOB_NAME"));
        // System.out.println(message);
