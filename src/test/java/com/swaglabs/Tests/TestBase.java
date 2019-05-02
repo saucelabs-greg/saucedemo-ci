@@ -34,9 +34,11 @@ public class TestBase {
 
     // public String buildTag = System.getenv("BUILD_TAG");
 
-    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+    public String buildTag = "jenkinsTest_Alex";
 
-    public String buildTag = "TestNGSwagLabs " + timestamp;
+    // Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+    //
+    // public String buildTag = "TestNGSwagLabs " + timestamp;
 
     public String username = System.getenv("SAUCE_USERNAME");
 
