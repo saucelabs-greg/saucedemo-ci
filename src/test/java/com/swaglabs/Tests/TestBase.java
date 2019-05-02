@@ -145,6 +145,7 @@ public class TestBase {
             capabilities.setCapability("build", buildTag);
         }
         System.out.println(capabilities);
+        
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
                 new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
