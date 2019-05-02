@@ -32,13 +32,13 @@ import java.time.Instant;
  */
 public class TestBase {
 
-    // public String buildTag = System.getenv("BUILD_TAG");
+    public String buildTag = System.getenv("BUILD_TAG");
 
     // public String buildTag = "jenkinsTestAlex";
 
-    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-
-    public String buildTag = "TestNGSwagLabs " + timestamp;
+    // Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+    //
+    // public String buildTag = "TestNGSwagLabs " + timestamp;
 
     public String username = System.getenv("SAUCE_USERNAME");
 
@@ -145,7 +145,7 @@ public class TestBase {
             capabilities.setCapability("build", buildTag);
         }
         System.out.println(capabilities);
-        
+
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
                 new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
