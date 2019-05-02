@@ -34,7 +34,7 @@ public class TestBase {
 
     // public String buildTag = System.getenv("BUILD_TAG");
 
-    public String buildTag = "jenkinsTest_Alex";
+    public String buildTag = "jenkinsTestAlex";
 
     // Timestamp timestamp = new Timestamp(System.currentTimeMillis());
     //
