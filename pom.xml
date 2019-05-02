@@ -62,9 +62,10 @@
 
                 <configuration>
                  <suiteXmlFiles>
-   					<suiteXmlFile>testng.xml</suiteXmlFile>
-   				</suiteXmlFiles>
+   					           <suiteXmlFile>testng.xml</suiteXmlFile>
+   				       </suiteXmlFiles>
                 	<parallel>classes</parallel>
+                  <threadCount>100</threadCount>
           			<testFailureIgnore>true</testFailureIgnore>
                     <redirectTestOutputToFile>false</redirectTestOutputToFile>
                 </configuration>
