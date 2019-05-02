@@ -135,7 +135,7 @@ public class TestBase {
         // capabilities.setCapability("extendedDebugging", true);
         // capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTests");
-        capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER") + "__" + System.getenv("BUILD_TAG"));
+        capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
         // capabilities.setCapability("build", "standardVMvsHeadless");
 //        capabilities.setCapability("avoidProxy", true);
 
