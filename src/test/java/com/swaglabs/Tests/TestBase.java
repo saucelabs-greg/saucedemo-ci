@@ -135,15 +135,15 @@ public class TestBase {
         // capabilities.setCapability("extendedDebugging", true);
         // capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTests");
-        // capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
+        capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER") + "__" + System.getenv("BUILD_TAG"));
         // capabilities.setCapability("build", "standardVMvsHeadless");
 //        capabilities.setCapability("avoidProxy", true);
 
         //Getting the build name.
         // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
-        if (buildTag != null) {
-            capabilities.setCapability("build", buildTag);
-        }
+        // if (buildTag != null) {
+        //     capabilities.setCapability("build", buildTag);
+        // }
         System.out.println(capabilities);
 
         // Launch remote browser and set it as the current thread
