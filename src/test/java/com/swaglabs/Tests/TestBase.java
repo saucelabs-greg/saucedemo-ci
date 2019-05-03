@@ -32,9 +32,9 @@ import java.time.Instant;
  */
 public class TestBase {
 
-    // public String buildTag = System.getenv("BUILD_TAG");
+    public String buildTag = System.getenv("BUILD_TAG");
 
-    public String buildTag = "jenkinsTestAlex";
+    // public String buildTag = "jenkinsTestAlex";
 
     // Timestamp timestamp = new Timestamp(System.currentTimeMillis());
     //
