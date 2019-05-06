@@ -31,7 +31,7 @@ public class AddToCartSingleItem extends TestBase {
      * Runs a simple test verifying Sign In.
      *
      * @throws InvalidElementStateException
-     * @throws InterruptedException 
+     * @throws InterruptedException
      */
     @Test(dataProvider = "hardCodedBrowsers")
     public void AddToCartSingleItemTest(String browser, String version, String os, Method method)
@@ -40,28 +40,28 @@ public class AddToCartSingleItem extends TestBase {
         //create webdriver session
         this.createDriver(browser, version, os, method.getName());
         WebDriver driver = this.getWebDriver();
-        
+
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
   	    driver.manage().window().maximize();
 
         this.annotate("Visiting Swag Labs Login page...");
         LoginPage loginPage = LoginPage.visitPage(driver);
-        
+
         this.annotate("Greet Sign In To Swag Labs Page...");
-        InventoryPage inventoryPage = loginPage.enterCredentials("standard_user", "secret_sauce");
-         
+        InventoryPage inventoryPage = loginPage.enterCredentials("performance_glitch_user", "secret_sauce");
+
         this.annotate("View Product Inventory...");
         AssertJUnit.assertTrue(inventoryPage.viewInventory().contains("Products"));
-         
+
         this.annotate("Add To Cart Backpack...");
         inventoryPage.clickAddToCartBackpack();
-         
+
         this.annotate("Go To Cart...");
         CartPage cart = inventoryPage.goToCart();
-         
+
         this.annotate("Verify Backpack Item In Cart...");
         AssertJUnit.assertTrue(cart.verifyBackpackinCart().contains("Sauce Labs Backpack"));
-           
+
     }
 
 }
