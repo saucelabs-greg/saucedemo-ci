@@ -68,20 +68,32 @@ public class TestBase {
         return new Object[][]{
             // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
+
             // new Object[]{"firefox", "latest", "Windows 10"},
             // new Object[]{"firefox", "latest-1", "Windows 10"},
+
             // new Object[]{"internet explorer", "11.0", "Windows 7"},
+
             // new Object[]{"safari", "latest", "OS X 10.11"},
             // new Object[]{"safari", "latest-1", "OS X 10.11"},
-            new Object[]{"chrome", "latest", "OS X 10.10"},
+
+            new Object[]{"chrome", "latest", "Windows 10"},
+            new Object[]{"chrome", "latest-1", "Windows 10"},
+
+            // new Object[]{"chrome", "latest", "OS X 10.11"},
+            // new Object[]{"chrome", "latest-1", "OS X 10.11"},
+            // new Object[]{"chrome", "latest", "OS X 10.10"},
             // new Object[]{"chrome", "latest-1", "OS X 10.10"},
+
             // new Object[]{"firefox", "latest-1", "Windows 8.1"},
             // new Object[]{"firefox", "latest", "Windows 10"},
             // new Object[]{"firefox", "latest", "OS X 10.11"},
-            // new Object[]{"chrome", "latest", "OS X 10.11"},
-            // new Object[]{"chrome", "latest-1", "OS X 10.11"}, //            new Object[]{"chrome", "latest-2", "OS X 10.11"},
 
-            // these are headless only
+
+            /**
+            *** use these when running headless
+            **/
+
             // new Object[]{"firefox", "latest", "Linux"},
             // new Object[]{"firefox", "latest-1", "Linux"},
             // new Object[]{"firefox", "latest-2", "Linux"},
