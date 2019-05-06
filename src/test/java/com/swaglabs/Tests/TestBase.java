@@ -80,10 +80,10 @@ public class TestBase {
             new Object[]{"chrome", "latest", "Windows 10"},
             new Object[]{"chrome", "latest-1", "Windows 10"},
 
-            new Object[]{"chrome", "latest", "OS X 10.11"},
-            new Object[]{"chrome", "latest-1", "OS X 10.11"},
-            new Object[]{"chrome", "latest", "OS X 10.10"},
-            new Object[]{"chrome", "latest-1", "OS X 10.10"},
+            // new Object[]{"chrome", "latest", "OS X 10.11"},
+            // new Object[]{"chrome", "latest-1", "OS X 10.11"},
+            // new Object[]{"chrome", "latest", "OS X 10.10"},
+            // new Object[]{"chrome", "latest-1", "OS X 10.10"},
 
             new Object[]{"firefox", "latest-1", "Windows 8.1"},
             new Object[]{"firefox", "latest", "Windows 10"},
