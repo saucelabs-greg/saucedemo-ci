@@ -66,28 +66,28 @@ public class TestBase {
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
-            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
-            new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
-
-            new Object[]{"firefox", "latest", "Windows 10"},
-            new Object[]{"firefox", "latest-1", "Windows 10"},
-
-            new Object[]{"internet explorer", "11.0", "Windows 7"},
-
-            new Object[]{"safari", "latest", "OS X 10.11"},
-            new Object[]{"safari", "latest-1", "OS X 10.11"},
-
-            new Object[]{"chrome", "latest", "Windows 10"},
-            new Object[]{"chrome", "latest-1", "Windows 10"},
+            // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
+            //
+            // new Object[]{"firefox", "latest", "Windows 10"},
+            // new Object[]{"firefox", "latest-1", "Windows 10"},
+            //
+            // new Object[]{"internet explorer", "11.0", "Windows 7"},
+            //
+            // new Object[]{"safari", "latest", "OS X 10.11"},
+            // new Object[]{"safari", "latest-1", "OS X 10.11"},
+            //
+            // new Object[]{"chrome", "latest", "Windows 10"},
+            // new Object[]{"chrome", "latest-1", "Windows 10"},
 
             // new Object[]{"chrome", "latest", "OS X 10.11"},
             // new Object[]{"chrome", "latest-1", "OS X 10.11"},
             // new Object[]{"chrome", "latest", "OS X 10.10"},
             // new Object[]{"chrome", "latest-1", "OS X 10.10"},
 
-            new Object[]{"firefox", "latest-1", "Windows 8.1"},
-            new Object[]{"firefox", "latest", "Windows 10"},
-            new Object[]{"firefox", "latest", "OS X 10.11"},
+            // new Object[]{"firefox", "latest-1", "Windows 8.1"},
+            // new Object[]{"firefox", "latest", "Windows 10"},
+            // new Object[]{"firefox", "latest", "OS X 10.11"},
 
 
             /**
@@ -162,7 +162,7 @@ public class TestBase {
         webDriver.set(new RemoteWebDriver(
                 new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
                 // new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), //app.us-east-1.saucelabs.com
-                capabilities));
+                // capabilities));
 
         // set current sessionId
         // String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
