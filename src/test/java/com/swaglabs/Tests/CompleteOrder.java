@@ -44,14 +44,14 @@ public class CompleteOrder extends TestBase {
         this.createDriver(browser, version, os, method.getName());
         WebDriver driver = this.getWebDriver();
 
-        driver.manage().timeouts().implicitlyWait(35, TimeUnit.SECONDS);
+        // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
   	    driver.manage().window().maximize();
 
         this.annotate("Visiting Swag Labs Login page...");
         LoginPage page = LoginPage.visitPage(driver);
 
         this.annotate("Greet Sign In To Swag Labs Page...");
-        InventoryPage inventory = page.enterCredentials("performance_glitch_user", "secret_sauce");
+        InventoryPage inventory = page.enterCredentials("standard_user", "secret_sauce");
 
         this.annotate("View Product Inventory...");
         AssertJUnit.assertTrue(inventory.viewInventory().contains("Products"));

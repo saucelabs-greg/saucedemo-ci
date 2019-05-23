@@ -40,9 +40,9 @@ public class TestBase {
     //
     // public String buildTag = "TestNGSwagLabs " + timestamp;
 
-    public String username = System.getenv("SAUCE_USERNAME");
+    public String username = System.getenv("testobject_username");
 
-    public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
+    public String accesskey = System.getenv("testobject_api_key");
 
 // public String accesskey = System.getenv("ba4d50e2-766f-4c71-a9e6-2b9abde028b4");
     /**
@@ -68,27 +68,27 @@ public class TestBase {
         return new Object[][]{
             // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
-            //
+            // //
             // new Object[]{"firefox", "latest", "Windows 10"},
             // new Object[]{"firefox", "latest-1", "Windows 10"},
             //
             // new Object[]{"internet explorer", "11.0", "Windows 7"},
-            //
+            // //
             // new Object[]{"safari", "latest", "OS X 10.11"},
             // new Object[]{"safari", "latest-1", "OS X 10.11"},
-            //
+            // //
             // new Object[]{"chrome", "latest", "Windows 10"},
             // new Object[]{"chrome", "latest-1", "Windows 10"},
-
+            //
             // new Object[]{"chrome", "latest", "OS X 10.11"},
             // new Object[]{"chrome", "latest-1", "OS X 10.11"},
             // new Object[]{"chrome", "latest", "OS X 10.10"},
             // new Object[]{"chrome", "latest-1", "OS X 10.10"},
-
+            //
             // new Object[]{"firefox", "latest-1", "Windows 8.1"},
             // new Object[]{"firefox", "latest", "Windows 10"},
             // new Object[]{"firefox", "latest", "OS X 10.11"},
-
+            new Object[]{"Samsung.*", "7", "Android"},
 
             /**
             *** use these when running headless
@@ -100,6 +100,7 @@ public class TestBase {
             // new Object[]{"chrome", "latest", "Linux"},
             // new Object[]{"chrome", "latest-1", "Linux"},
             // new Object[]{"chrome", "latest-2", "Linux"},
+
         };
     }
 
@@ -140,29 +141,19 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         // set desired capabilities to launch appropriate browser on Sauce
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
-        // capabilities.setCapability(CapabilityType.VERSION, version);
-        capabilities.setCapability(CapabilityType.PLATFORM, os);
-        capabilities.setCapability("name", methodName);
-        capabilities.setCapability("extendedDebugging", true);
-        capabilities.setCapability("capturePerformance", true);
-        // capabilities.setCapability("tunnelIdentifier", "allTheTests");
-        // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
-        capabilities.setCapability("build", System.getenv("BUILD_TAG"));
-//        capabilities.setCapability("avoidProxy", true);
+        capabilities.setCapability("testobject_api_key", accesskey);
+        capabilities.setCapability("testobject_test_name", methodName);
+        capabilities.setCapability("platformName", os);
+        capabilities.setCapability("platformVersion", version);
+        capabilities.setCapability("deviceName", browser);
 
-        //Getting the build name.
-        // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
-        // if (buildTag != null) {
-        //     capabilities.setCapability("build", buildTag);
-        // }
         System.out.println(capabilities);
 
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
-                new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
+                new URL("https://us1.appium.testobject.com/wd/hub"),
                 // new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), //app.us-east-1.saucelabs.com
-                // capabilities));
+                capabilities));
 
         // set current sessionId
         // String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
