@@ -44,7 +44,6 @@ public class TestBase {
 
     public String accesskey = System.getenv("testobject_api_key");
 
-// public String accesskey = System.getenv("ba4d50e2-766f-4c71-a9e6-2b9abde028b4");
     /**
      * ThreadLocal variable which contains the {@link WebDriver} instance which
      * is used to perform browser interactions with.
