@@ -41,7 +41,7 @@ public class LoginLockedOutUser extends TestBase {
         WebDriver driver = this.getWebDriver();
 
         // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-  	    driver.manage().window().maximize();
+  	    // driver.manage().window().maximize();
 
         this.annotate("Visiting Swag Labs Login page...");
         LoginPage page = LoginPage.visitPage(driver);
