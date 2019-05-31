@@ -29,7 +29,7 @@ public class LaunchSwagLabs extends TestBase {
      * Runs a simple test verifying Sign In.
      *
      * @throws InvalidElementStateException
-     * @throws InterruptedException 
+     * @throws InterruptedException
      */
     @Test(dataProvider = "hardCodedBrowsers")
     public void LaunchSwagLabsTest(String browser, String version, String os, Method method)
@@ -38,18 +38,18 @@ public class LaunchSwagLabs extends TestBase {
         //create webdriver session
         this.createDriver(browser, version, os, method.getName());
         WebDriver driver = this.getWebDriver();
-        
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-  	    driver.manage().window().maximize();
+
+        // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+  	    // driver.manage().window().maximize();
 
         this.annotate("Visiting Swag Labs Login page...");
         LoginPage page = LoginPage.visitPage(driver);
         //Assert.assertTrue(page.verifyLoginPage().contains("LOGIN"));
         AssertJUnit.assertTrue(page.verifyLoginPage());
-        
-        
-        
-           
+
+
+
+
     }
 
 }
