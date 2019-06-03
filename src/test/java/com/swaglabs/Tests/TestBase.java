@@ -68,40 +68,40 @@ public class TestBase {
         return new Object[][]{
 
             // Windows OS
-            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
-            new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
-
-            new Object[]{"internet explorer", "11.0", "Windows 7"},
-
-            new Object[]{"firefox", "latest", "Windows 10"},
-            new Object[]{"firefox", "latest-1", "Windows 10"},
-
-            new Object[]{"chrome", "latest", "Windows 10"},
-            new Object[]{"chrome", "latest-1", "Windows 10"},
-
-
-            // Mac OS
-            new Object[]{"safari", "latest", "OS X 10.11"},
-            new Object[]{"safari", "latest-1", "OS X 10.11"},
-
-            new Object[]{"chrome", "latest", "OS X 10.11"},
-            new Object[]{"chrome", "latest-1", "OS X 10.11"},
-            new Object[]{"chrome", "latest", "OS X 10.10"},
-            new Object[]{"chrome", "latest-1", "OS X 10.10"},
-
-            new Object[]{"firefox", "latest", "OS X 10.11"},
+            // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
+            //
+            // new Object[]{"internet explorer", "11.0", "Windows 7"},
+            //
+            // new Object[]{"firefox", "latest", "Windows 10"},
+            // new Object[]{"firefox", "latest-1", "Windows 10"},
+            //
+            // new Object[]{"chrome", "latest", "Windows 10"},
+            // new Object[]{"chrome", "latest-1", "Windows 10"},
+            //
+            //
+            // // Mac OS
+            // new Object[]{"safari", "latest", "OS X 10.11"},
+            // new Object[]{"safari", "latest-1", "OS X 10.11"},
+            //
+            // new Object[]{"chrome", "latest", "OS X 10.11"},
+            // new Object[]{"chrome", "latest-1", "OS X 10.11"},
+            // new Object[]{"chrome", "latest", "OS X 10.10"},
+            // new Object[]{"chrome", "latest-1", "OS X 10.10"},
+            //
+            // new Object[]{"firefox", "latest", "OS X 10.11"},
 
 
             /**
             *** use these when running headless
             **/
 
-            // new Object[]{"firefox", "latest", "Linux"},
-            // new Object[]{"firefox", "latest-1", "Linux"},
-            // new Object[]{"firefox", "latest-2", "Linux"},
-            // new Object[]{"chrome", "latest", "Linux"},
-            // new Object[]{"chrome", "latest-1", "Linux"},
-            // new Object[]{"chrome", "latest-2", "Linux"},
+            new Object[]{"firefox", "latest", "Linux"},
+            new Object[]{"firefox", "latest-1", "Linux"},
+            new Object[]{"firefox", "latest-2", "Linux"},
+            new Object[]{"chrome", "latest", "Linux"},
+            new Object[]{"chrome", "latest-1", "Linux"},
+            new Object[]{"chrome", "latest-2", "Linux"},
         };
     }
 
@@ -147,8 +147,8 @@ public class TestBase {
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
         capabilities.setCapability("extendedDebugging", true);
-        capabilities.setCapability("capturePerformance", true);
-        capabilities.setCapability("tunnelIdentifier", "allTheTesting");
+        // capabilities.setCapability("capturePerformance", true);
+        // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
         capabilities.setCapability("build", "todaysTests");
 //        capabilities.setCapability("avoidProxy", true);
@@ -162,8 +162,8 @@ public class TestBase {
 
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
-                new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
-                // new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), //app.us-east-1.saucelabs.com
+                // new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
+                new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), //app.us-east-1.saucelabs.com
                 capabilities));
 
         // set current sessionId
