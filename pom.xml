@@ -42,7 +42,12 @@
             <version>2.1.23</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+          <groupId>com.saucelabs</groupId>
+          <artifactId>saucerest</artifactId>
+          <version>1.0.40</version>
+          <scope>test</scope>
+        </dependency>
     </dependencies>
 
  <build>
@@ -59,15 +64,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.12.4</version>
-
                 <configuration>
-                 <suiteXmlFiles>
+                  <suiteXmlFiles>
    					           <suiteXmlFile>testng.xml</suiteXmlFile>
-   				       </suiteXmlFiles>
-                	<parallel>classes</parallel>
+		              </suiteXmlFiles>
+              	  <parallel>classes</parallel>
                   <threadCount>100</threadCount>
-          			<testFailureIgnore>true</testFailureIgnore>
-                    <redirectTestOutputToFile>false</redirectTestOutputToFile>
+      			      <testFailureIgnore>true</testFailureIgnore>
+                      <redirectTestOutputToFile>false</redirectTestOutputToFile>
                 </configuration>
             </plugin>
         </plugins>
