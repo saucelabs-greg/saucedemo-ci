@@ -44,7 +44,6 @@ public class TestBase {
 
     public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
 
-// public String accesskey = System.getenv("ba4d50e2-766f-4c71-a9e6-2b9abde028b4");
     /**
      * ThreadLocal variable which contains the {@link WebDriver} instance which
      * is used to perform browser interactions with.
@@ -68,28 +67,33 @@ public class TestBase {
         return new Object[][]{
 
             // Windows OS
-            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
-            new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
+            // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
             //
             // new Object[]{"internet explorer", "11.0", "Windows 7"},
             //
-            new Object[]{"firefox", "latest", "Windows 10"},
-            new Object[]{"firefox", "latest-1", "Windows 10"},
+            // new Object[]{"firefox", "latest", "Windows 10"},
+            // new Object[]{"firefox", "latest-1", "Windows 10"},
             //
-            new Object[]{"chrome", "latest", "Windows 10"},
+            // new Object[]{"chrome", "latest", "Windows 10"},
             // new Object[]{"chrome", "latest-1", "Windows 10"},
             //
             //
             // // Mac OS
             new Object[]{"safari", "latest", "OS X 10.11"},
             new Object[]{"safari", "latest-1", "OS X 10.11"},
+            new Object[]{"safari", "latest-2", "OS X 10.11"},
             //
-            new Object[]{"chrome", "latest", "OS X 10.11"},
-            new Object[]{"chrome", "latest-1", "OS X 10.11"},
+            new Object[]{"safari", "latest", "OS X 10.10"},
+            new Object[]{"safari", "latest-1", "OS X 10.10"},
+            new Object[]{"safari", "latest-2", "OS X 10.10"},
+            //
+            // new Object[]{"chrome", "latest", "OS X 10.11"},
+            // new Object[]{"chrome", "latest-1", "OS X 10.11"},
             // new Object[]{"chrome", "latest", "OS X 10.10"},
             // new Object[]{"chrome", "latest-1", "OS X 10.10"},
             //
-            new Object[]{"firefox", "latest", "OS X 10.11"},
+            // new Object[]{"firefox", "latest", "OS X 10.11"},
 
 
             /**
@@ -150,7 +154,7 @@ public class TestBase {
         capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
-        capabilities.setCapability("build", "todaysTests2");
+        capabilities.setCapability("build", "safariOS.11/10");
 //        capabilities.setCapability("avoidProxy", true);
 
         //Getting the build name.
