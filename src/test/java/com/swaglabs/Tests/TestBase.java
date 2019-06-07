@@ -66,6 +66,7 @@ public class TestBase {
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
 
+            new Object[]{"Samsung.*", "9", "Android"},
             // Windows OS
             // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
@@ -80,13 +81,13 @@ public class TestBase {
             //
             //
             // // Mac OS
-            new Object[]{"safari", "latest", "OS X 10.11"},
-            new Object[]{"safari", "latest-1", "OS X 10.11"},
-            new Object[]{"safari", "latest-2", "OS X 10.11"},
-            //
-            new Object[]{"safari", "latest", "OS X 10.10"},
-            new Object[]{"safari", "latest-1", "OS X 10.10"},
-            new Object[]{"safari", "latest-2", "OS X 10.10"},
+            // new Object[]{"safari", "latest", "OS X 10.11"},
+            // new Object[]{"safari", "latest-1", "OS X 10.11"},
+            // new Object[]{"safari", "latest-2", "OS X 10.11"},
+            // //
+            // new Object[]{"safari", "latest", "OS X 10.10"},
+            // new Object[]{"safari", "latest-1", "OS X 10.10"},
+            // new Object[]{"safari", "latest-2", "OS X 10.10"},
             //
             // new Object[]{"chrome", "latest", "OS X 10.11"},
             // new Object[]{"chrome", "latest-1", "OS X 10.11"},
@@ -146,12 +147,16 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         // set desired capabilities to launch appropriate browser on Sauce
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
-        capabilities.setCapability(CapabilityType.VERSION, version);
-        capabilities.setCapability(CapabilityType.PLATFORM, os);
+        // capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
+        // capabilities.setCapability(CapabilityType.VERSION, version);
+        // capabilities.setCapability(CapabilityType.PLATFORM, os);
+        capabilities.setCapability("deviceName", browser);
+        capabilities.setCapability("platformVersion", version);
+        capabilities.setCapability("platformName", os);
+        capabilities.setCapability("testobject_api_key", "1EDB97F8709B4213812FE61C812C132E");
         capabilities.setCapability("name", methodName);
-        capabilities.setCapability("extendedDebugging", true);
-        capabilities.setCapability("capturePerformance", true);
+        // capabilities.setCapability("extendedDebugging", true);
+        // capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
         capabilities.setCapability("build", "safariOS.11/10");
@@ -166,7 +171,8 @@ public class TestBase {
 
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
-                new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
+                // new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
+                new URL("https://us1.appium.testobject.com/wd/hub"),
                 // new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), //app.us-east-1.saucelabs.com
                 capabilities));
 
