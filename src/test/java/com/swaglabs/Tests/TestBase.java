@@ -153,7 +153,7 @@ public class TestBase {
         capabilities.setCapability("deviceName", browser);
         capabilities.setCapability("platformVersion", version);
         capabilities.setCapability("platformName", os);
-        capabilities.setCapability("testobject_api_key", "1EDB97F8709B4213812FE61C812C132E");
+        capabilities.setCapability("testobject_api_key", System.getenv("SAUCE_WEB_APP"));
         capabilities.setCapability("name", methodName);
         // capabilities.setCapability("extendedDebugging", true);
         // capabilities.setCapability("capturePerformance", true);
