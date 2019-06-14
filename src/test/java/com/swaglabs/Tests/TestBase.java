@@ -10,9 +10,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
 
 import java.io.File;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.FileInputStream;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -32,8 +29,12 @@ import java.util.logging.SimpleFormatter;
  *
  * @author Shadab Siddiqui
  */
+
 public class TestBase {
 
+    static {
+          Logger.getGlobal().setLevel(Level.ALL);
+    }
     public String buildTag = System.getenv("BUILD_TAG");
 
     public String username = System.getenv("SAUCE_USERNAME");
@@ -146,15 +147,12 @@ public class TestBase {
         capabilities.setCapability(CapabilityType.VERSION, version);
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
-        capabilities.setCapability("browserSideLog", true);
         // capabilities.setCapability("extendedDebugging", true);
         // capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
         capabilities.setCapability("build", "greatResponsibility");
         // capabilities.setCapability("avoidProxy", true);
-        System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
-        System.setProperty("webdriver.chrome.verboseLogging", "true");
         //Getting the build name.
         // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
         // if (buildTag != null) {
@@ -172,6 +170,7 @@ public class TestBase {
         File file = new File(logFileName);
         try {
             Logger logger = Logger.getLogger("org.openqa.selenium.remote");
+            logger.setLevel(Level.ALL);
             Handler handler = new FileHandler(logFileName, true);
             SimpleFormatter newFormatter = new SimpleFormatter();
             handler.setLevel(Level.ALL);
