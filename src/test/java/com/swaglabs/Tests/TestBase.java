@@ -1,7 +1,5 @@
 package com.swaglabs.Tests;
 
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
 import org.testng.annotations.AfterMethod;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,20 +9,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
 
-import java.io.File;
 
-
-import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.UnexpectedException;
 
-import java.util.logging.FileHandler;
-import java.util.logging.Handler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 /**
  * Simple TestNG test which demonstrates being instantiated via a DataProvider
@@ -32,18 +22,8 @@ import java.util.logging.SimpleFormatter;
  *
  * @author Shadab Siddiqui
  */
-
 public class TestBase {
 
-    static {
-          Logger.getGlobal().setLevel(Level.ALL);
-          try {
-            Logger.getGlobal().addHandler(new FileHandler("global-logs.log"));
-          } catch (IOException err) {
-              err.printStackTrace();
-          }
-
-    }
     public String buildTag = System.getenv("BUILD_TAG");
 
     public String username = System.getenv("SAUCE_USERNAME");
@@ -73,45 +53,45 @@ public class TestBase {
         return new Object[][]{
 
             // Windows OS
-            // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
             //
-            // new Object[]{"internet explorer", "11.0", "Windows 7"},
+            new Object[]{"internet explorer", "11.0", "Windows 7"},
             //
-            // new Object[]{"firefox", "latest", "Windows 10"},
+            new Object[]{"firefox", "latest", "Windows 10"},
             // new Object[]{"firefox", "latest-1", "Windows 10"},
             //
             // new Object[]{"chrome", "latest", "Windows 10"},
-            // new Object[]{"chrome", "latest-1", "Windows 10"},
-
-
-            // Mac OS
-            // new Object[]{"safari", "latest", "OS X 10.11"},
+            new Object[]{"chrome", "latest-1", "Windows 10"},
+            //
+            //
+            // // Mac OS
+            new Object[]{"safari", "latest", "OS X 10.11"},
             // new Object[]{"safari", "latest-1", "OS X 10.11"},
             // new Object[]{"safari", "latest-2", "OS X 10.11"},
-
-            // new Object[]{"safari", "latest", "OS X 10.10"},
+            // //
+            new Object[]{"safari", "latest", "OS X 10.10"},
             // new Object[]{"safari", "latest-1", "OS X 10.10"},
             // new Object[]{"safari", "latest-2", "OS X 10.10"},
-
+            //
             // new Object[]{"chrome", "latest", "OS X 10.11"},
-            // new Object[]{"chrome", "74", "OS X 10.11"},
+            new Object[]{"chrome", "latest-1", "OS X 10.11"},
             // new Object[]{"chrome", "latest", "OS X 10.10"},
             // new Object[]{"chrome", "latest-1", "OS X 10.10"},
-
+            //
             // new Object[]{"firefox", "latest", "OS X 10.11"},
 
 
             /**
             *** use these when running headless
             **/
-            //
+
             // new Object[]{"firefox", "latest", "Linux"},
             // new Object[]{"firefox", "latest-1", "Linux"},
             // new Object[]{"firefox", "latest-2", "Linux"},
-            new Object[]{"chrome", "latest", "Linux"},
-            new Object[]{"chrome", "latest-1", "Linux"},
-            new Object[]{"chrome", "latest-2", "Linux"},
+            // new Object[]{"chrome", "latest", "Linux"},
+            // new Object[]{"chrome", "latest-1", "Linux"},
+            // new Object[]{"chrome", "latest-2", "Linux"},
         };
     }
 
@@ -156,52 +136,32 @@ public class TestBase {
         capabilities.setCapability(CapabilityType.VERSION, version);
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
-        // capabilities.setCapability("extendedDebugging", true);
-        // capabilities.setCapability("capturePerformance", true);
+        capabilities.setCapability("extendedDebugging", true);
+        capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
-        capabilities.setCapability("build", "greatResponsibility");
-        // capabilities.setCapability("avoidProxy", true);
+        capabilities.setCapability("build", "v25-TopLevel");
+//        capabilities.setCapability("avoidProxy", true);
+
         //Getting the build name.
         // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
         // if (buildTag != null) {
         //     capabilities.setCapability("build", buildTag);
         // }
-        LoggingPreferences logPrefs = new LoggingPreferences();
-           logPrefs.enable(LogType.SERVER, Level.ALL);
-           logPrefs.enable(LogType.CLIENT, Level.ALL);
-           logPrefs.enable(LogType.DRIVER, Level.ALL);
-           logPrefs.enable(LogType.BROWSER, Level.ALL);
-           capabilities.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
-
         System.out.println(capabilities);
 
         // Launch remote browser and set it as the current thread
-        RemoteWebDriver driver = new RemoteWebDriver(
-              // new URL("http://" + username + ":" + accesskey + "@ondemand.saucelabs.com:80/wd/hub"), // Desktop VMs
-              new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), // Headless Sessions
-              capabilities);
-        String logFileName = "logs.log";
-        File file = new File(logFileName);
-        try {
-            Logger logger = Logger.getLogger("org.openqa.selenium.remote");
-            logger.setLevel(Level.ALL);
-            Handler handler = new FileHandler(logFileName, true);
-            SimpleFormatter newFormatter = new SimpleFormatter();
-            handler.setLevel(Level.ALL);
-            handler.setFormatter(newFormatter);
-            logger.addHandler(handler);
-            driver.setLogLevel(Level.ALL);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        webDriver.set(new RemoteWebDriver(
+                new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"), // Sauce full VMs
+                // new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), // Sauce Headless Sessions
+                capabilities));
 
         // set current sessionId
-        String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
-        sessionId.set(id);
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-              sessionId, System.getenv("JOB_NAME"));
-        System.out.println(message);
+        // String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+        // sessionId.set(id);
+       // String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+       //         sessionId, System.getenv("JOB_NAME"));
+       // System.out.println(message);
     }
 
     /**
@@ -210,10 +170,6 @@ public class TestBase {
      */
     @AfterMethod
     public void tearDown(ITestResult result) throws Exception {
-        System.out.println("all SERVER logs: " + webDriver.get().manage().logs().get(LogType.SERVER).getAll());
-        System.out.println(webDriver.get().manage().logs().get(LogType.CLIENT).getAll());
-        System.out.println(webDriver.get().manage().logs().get(LogType.DRIVER).getAll());
-        System.out.println(webDriver.get().manage().logs().get(LogType.BROWSER).getAll());
         ((JavascriptExecutor) webDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed")); //sauce:context
         webDriver.get().quit();
     }
