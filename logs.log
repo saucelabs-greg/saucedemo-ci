@@ -40,3 +40,209 @@ Jun 13, 2019 10:53:13 PM org.openqa.selenium.remote.RemoteWebDriver log
 FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
 Jun 13, 2019 10:53:13 PM org.openqa.selenium.remote.RemoteWebDriver log
 FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:10:10 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:10:13 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@559b5da3, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@5eb2c401, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@256cb101, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@10ed2791, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@5d3ef97a, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@36e39ea5, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@25440d8, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@293c8721, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@11d5b2a0, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@4106bcab, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@202e8c4c, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@457c1f7c, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@79bdf123, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@53be1f25, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@4711f459, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@4c206a43, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@4cc55003, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@265e1b57, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@a19d687, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@570d8604, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@60e90bc0, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@676bee7f, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@3443739d, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@787fdf3f, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@17b5b074, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 13, 2019 11:48:23 PM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@4e497894, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@1ad16ebc, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@17b5b074, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@7f7dfb02, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@38ee9329, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@391c4ef9, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@53b30f69, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@d9b0486, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@21d401fb, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@3e398812, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@77de949e, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@92efdcc, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@6b15334e, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@28d8beaa, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@a19d687, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@5eb2c401, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@187d6d14, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@5dca3da2, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@10ed2791, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@570d8604, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@5d3ef97a, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@1d70c200, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@58b39fcb, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@86faa9b, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@7e8b3313, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:00:12 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@46f96f44, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:00:15 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@3633d8b3, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:01:49 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@74ea6894, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:01:49 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@58b39fcb, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:01:50 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@1e92e51f, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@3cb7d490, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@5d756284, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@3eeddc5e, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@1dece819, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartSingleItemTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@5a0fdf3f, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@512f065d, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@4661a1e1, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@27b8518f, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@60b996a1, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@7a36656, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@457c1f7c, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=AddToCartMultipleItemsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@36be7413, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@17b5b074, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LaunchSwagLabsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@68ce50eb, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@7568b3ae, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLockedOutUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@3443739d, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginLogoutTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@6bcc538, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginInvalidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@4711f459, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=ValidateOrderTotalsTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@78deee73, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@570d8604, browserName=chrome, version=latest, platform=LINUX}]}]
+Jun 14, 2019 12:01:54 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@38ee9329, browserName=chrome, version=latest-2, platform=LINUX}]}]
+Jun 14, 2019 12:01:55 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=LoginValidUserTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@5d3ef97a, browserName=chrome, version=latest-1, platform=LINUX}]}]
+Jun 14, 2019 12:01:55 AM org.openqa.selenium.remote.RemoteWebDriver log
+FINE: Executed: [null, newSession {desiredCapabilities=Capabilities [{build=greatResponsibility, name=CompleteOrderTest, loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@64549b45, browserName=chrome, version=latest-1, platform=LINUX}]}]

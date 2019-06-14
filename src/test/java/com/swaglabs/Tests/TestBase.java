@@ -1,5 +1,7 @@
 package com.swaglabs.Tests;
 
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
 import org.testng.annotations.AfterMethod;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +12,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
 
 import java.io.File;
+
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -34,6 +37,12 @@ public class TestBase {
 
     static {
           Logger.getGlobal().setLevel(Level.ALL);
+          try {
+            Logger.getGlobal().addHandler(new FileHandler("global-logs.log"));
+          } catch (IOException err) {
+              err.printStackTrace();
+          }
+
     }
     public String buildTag = System.getenv("BUILD_TAG");
 
@@ -158,6 +167,12 @@ public class TestBase {
         // if (buildTag != null) {
         //     capabilities.setCapability("build", buildTag);
         // }
+        LoggingPreferences logPrefs = new LoggingPreferences();
+           logPrefs.enable(LogType.SERVER, Level.ALL);
+           logPrefs.enable(LogType.CLIENT, Level.ALL);
+           logPrefs.enable(LogType.DRIVER, Level.ALL);
+           logPrefs.enable(LogType.BROWSER, Level.ALL);
+           capabilities.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
 
         System.out.println(capabilities);
 
@@ -195,6 +210,10 @@ public class TestBase {
      */
     @AfterMethod
     public void tearDown(ITestResult result) throws Exception {
+        System.out.println("all SERVER logs: " + webDriver.get().manage().logs().get(LogType.SERVER).getAll());
+        System.out.println(webDriver.get().manage().logs().get(LogType.CLIENT).getAll());
+        System.out.println(webDriver.get().manage().logs().get(LogType.DRIVER).getAll());
+        System.out.println(webDriver.get().manage().logs().get(LogType.BROWSER).getAll());
         ((JavascriptExecutor) webDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed")); //sauce:context
         webDriver.get().quit();
     }
