@@ -96,9 +96,9 @@ public class TestBase {
             *** use these when running headless
             **/
             //
-            new Object[]{"firefox", "latest", "Linux"},
-            new Object[]{"firefox", "latest-1", "Linux"},
-            new Object[]{"firefox", "latest-2", "Linux"},
+            // new Object[]{"firefox", "latest", "Linux"},
+            // new Object[]{"firefox", "latest-1", "Linux"},
+            // new Object[]{"firefox", "latest-2", "Linux"},
             new Object[]{"chrome", "latest", "Linux"},
             new Object[]{"chrome", "latest-1", "Linux"},
             new Object[]{"chrome", "latest-2", "Linux"},
@@ -146,13 +146,15 @@ public class TestBase {
         capabilities.setCapability(CapabilityType.VERSION, version);
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
+        capabilities.setCapability("browserSideLog", true);
         // capabilities.setCapability("extendedDebugging", true);
         // capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
         capabilities.setCapability("build", "greatResponsibility");
         // capabilities.setCapability("avoidProxy", true);
-
+        System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
+        System.setProperty("webdriver.chrome.verboseLogging", "true");
         //Getting the build name.
         // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
         // if (buildTag != null) {
@@ -166,18 +168,11 @@ public class TestBase {
               // new URL("http://" + username + ":" + accesskey + "@ondemand.saucelabs.com:80/wd/hub"), // Desktop VMs
               new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), // Headless Sessions
               capabilities);
-
-        // set current sessionId
-        String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
-        sessionId.set(id);
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-              sessionId, System.getenv("JOB_NAME"));
-        System.out.println(message);
-
-        String logFileName = "/Users/alexgriffen/Demos/saucedemo/logs.log";
+        String logFileName = "logs.log";
+        File file = new File(logFileName);
         try {
-            Logger logger = Logger.getLogger(RemoteWebDriver.class.getName());
-            Handler handler = new FileHandler(logFileName = "/Users/alexgriffen/Demos/saucedemo/logs.log", true);
+            Logger logger = Logger.getLogger("org.openqa.selenium.remote");
+            Handler handler = new FileHandler(logFileName, true);
             SimpleFormatter newFormatter = new SimpleFormatter();
             handler.setLevel(Level.ALL);
             handler.setFormatter(newFormatter);
@@ -187,7 +182,12 @@ public class TestBase {
             e.printStackTrace();
         }
 
-
+        // set current sessionId
+        String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+        sessionId.set(id);
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+              sessionId, System.getenv("JOB_NAME"));
+        System.out.println(message);
     }
 
     /**
@@ -198,15 +198,6 @@ public class TestBase {
     public void tearDown(ITestResult result) throws Exception {
         ((JavascriptExecutor) webDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed")); //sauce:context
         webDriver.get().quit();
-        File file = new File("/Users/alexgriffen/Demos/saucedemo/logs.log");
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-        StringBuffer sb = new StringBuffer();
-        String eachLine = null;
-        while ((eachLine = br.readLine()) != null) {
-            sb.append(eachLine).append("\n");
-        }
-        br.close();
-        System.out.println("Log contents : \n" + sb.toString());
     }
 
     protected void annotate(String text) {
