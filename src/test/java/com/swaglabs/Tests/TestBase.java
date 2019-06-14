@@ -1,28 +1,30 @@
 package com.swaglabs.Tests;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterMethod;
-import com.saucelabs.common.SauceOnDemandAuthentication;
-import com.saucelabs.common.SauceOnDemandSessionIdProvider;
-import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
-import com.saucelabs.testng.SauceOnDemandTestListener;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
 
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.FileInputStream;
+
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.UnexpectedException;
-import java.sql.Timestamp;
-import java.time.Instant;
+
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 /**
  * Simple TestNG test which demonstrates being instantiated via a DataProvider
@@ -33,12 +35,6 @@ import java.time.Instant;
 public class TestBase {
 
     public String buildTag = System.getenv("BUILD_TAG");
-
-    // public String buildTag = "jenkinsTestAlex";
-
-    // Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-    //
-    // public String buildTag = "TestNGSwagLabs " + timestamp;
 
     public String username = System.getenv("SAUCE_USERNAME");
 
@@ -66,7 +62,6 @@ public class TestBase {
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
 
-            new Object[]{"Samsung.*", "9", "Android"},
             // Windows OS
             // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
@@ -78,35 +73,35 @@ public class TestBase {
             //
             // new Object[]{"chrome", "latest", "Windows 10"},
             // new Object[]{"chrome", "latest-1", "Windows 10"},
-            //
-            //
-            // // Mac OS
+
+
+            // Mac OS
             // new Object[]{"safari", "latest", "OS X 10.11"},
             // new Object[]{"safari", "latest-1", "OS X 10.11"},
             // new Object[]{"safari", "latest-2", "OS X 10.11"},
-            // //
+
             // new Object[]{"safari", "latest", "OS X 10.10"},
             // new Object[]{"safari", "latest-1", "OS X 10.10"},
             // new Object[]{"safari", "latest-2", "OS X 10.10"},
-            //
+
             // new Object[]{"chrome", "latest", "OS X 10.11"},
-            // new Object[]{"chrome", "latest-1", "OS X 10.11"},
+            // new Object[]{"chrome", "74", "OS X 10.11"},
             // new Object[]{"chrome", "latest", "OS X 10.10"},
             // new Object[]{"chrome", "latest-1", "OS X 10.10"},
-            //
+
             // new Object[]{"firefox", "latest", "OS X 10.11"},
 
 
             /**
             *** use these when running headless
             **/
-
-            // new Object[]{"firefox", "latest", "Linux"},
-            // new Object[]{"firefox", "latest-1", "Linux"},
-            // new Object[]{"firefox", "latest-2", "Linux"},
-            // new Object[]{"chrome", "latest", "Linux"},
-            // new Object[]{"chrome", "latest-1", "Linux"},
-            // new Object[]{"chrome", "latest-2", "Linux"},
+            //
+            new Object[]{"firefox", "latest", "Linux"},
+            new Object[]{"firefox", "latest-1", "Linux"},
+            new Object[]{"firefox", "latest-2", "Linux"},
+            new Object[]{"chrome", "latest", "Linux"},
+            new Object[]{"chrome", "latest-1", "Linux"},
+            new Object[]{"chrome", "latest-2", "Linux"},
         };
     }
 
@@ -147,41 +142,52 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         // set desired capabilities to launch appropriate browser on Sauce
-        // capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
-        // capabilities.setCapability(CapabilityType.VERSION, version);
-        // capabilities.setCapability(CapabilityType.PLATFORM, os);
-        capabilities.setCapability("deviceName", browser);
-        capabilities.setCapability("platformVersion", version);
-        capabilities.setCapability("platformName", os);
-        capabilities.setCapability("testobject_api_key", System.getenv("SAUCE_WEB_APP"));
+        capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
+        capabilities.setCapability(CapabilityType.VERSION, version);
+        capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
         // capabilities.setCapability("extendedDebugging", true);
         // capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
-        capabilities.setCapability("build", "safariOS.11/10");
-//        capabilities.setCapability("avoidProxy", true);
+        capabilities.setCapability("build", "greatResponsibility");
+        // capabilities.setCapability("avoidProxy", true);
 
         //Getting the build name.
         // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
         // if (buildTag != null) {
         //     capabilities.setCapability("build", buildTag);
         // }
+
         System.out.println(capabilities);
 
         // Launch remote browser and set it as the current thread
-        webDriver.set(new RemoteWebDriver(
-                // new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
-                new URL("https://us1.appium.testobject.com/wd/hub"),
-                // new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), //app.us-east-1.saucelabs.com
-                capabilities));
+        RemoteWebDriver driver = new RemoteWebDriver(
+              // new URL("http://" + username + ":" + accesskey + "@ondemand.saucelabs.com:80/wd/hub"), // Desktop VMs
+              new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), // Headless Sessions
+              capabilities);
 
         // set current sessionId
-        // String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
-        // sessionId.set(id);
-       // String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-       //         sessionId, System.getenv("JOB_NAME"));
-       // System.out.println(message);
+        String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+        sessionId.set(id);
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+              sessionId, System.getenv("JOB_NAME"));
+        System.out.println(message);
+
+        String logFileName = "/Users/alexgriffen/Demos/saucedemo/logs.log";
+        try {
+            Logger logger = Logger.getLogger(RemoteWebDriver.class.getName());
+            Handler handler = new FileHandler(logFileName = "/Users/alexgriffen/Demos/saucedemo/logs.log", true);
+            SimpleFormatter newFormatter = new SimpleFormatter();
+            handler.setLevel(Level.ALL);
+            handler.setFormatter(newFormatter);
+            logger.addHandler(handler);
+            driver.setLogLevel(Level.ALL);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     /**
@@ -192,6 +198,15 @@ public class TestBase {
     public void tearDown(ITestResult result) throws Exception {
         ((JavascriptExecutor) webDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed")); //sauce:context
         webDriver.get().quit();
+        File file = new File("/Users/alexgriffen/Demos/saucedemo/logs.log");
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+        StringBuffer sb = new StringBuffer();
+        String eachLine = null;
+        while ((eachLine = br.readLine()) != null) {
+            sb.append(eachLine).append("\n");
+        }
+        br.close();
+        System.out.println("Log contents : \n" + sb.toString());
     }
 
     protected void annotate(String text) {

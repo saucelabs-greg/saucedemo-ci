@@ -12,7 +12,8 @@ import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.android.AndroidDriver;
 import com.swaglabs.Pages.InventoryPage;
 import com.swaglabs.Pages.LoginPage;
 import java.lang.reflect.Method;
