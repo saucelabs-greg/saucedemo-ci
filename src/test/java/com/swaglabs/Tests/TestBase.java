@@ -9,7 +9,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.DataProvider;
 
-
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -53,30 +52,30 @@ public class TestBase {
         return new Object[][]{
 
             // Windows OS
-            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
             //
-            new Object[]{"internet explorer", "11.0", "Windows 7"},
+            // new Object[]{"internet explorer", "11.0", "Windows 7"},
             //
             new Object[]{"firefox", "latest", "Windows 10"},
-            // new Object[]{"firefox", "latest-1", "Windows 10"},
+            new Object[]{"firefox", "latest-1", "Windows 10"},
             //
-            // new Object[]{"chrome", "latest", "Windows 10"},
+            new Object[]{"chrome", "latest", "Windows 10"},
             new Object[]{"chrome", "latest-1", "Windows 10"},
             //
             //
             // // Mac OS
-            new Object[]{"safari", "latest", "OS X 10.11"},
+            // new Object[]{"safari", "latest", "OS X 10.11"},
             // new Object[]{"safari", "latest-1", "OS X 10.11"},
             // new Object[]{"safari", "latest-2", "OS X 10.11"},
             // //
-            new Object[]{"safari", "latest", "OS X 10.10"},
+            // new Object[]{"safari", "latest", "OS X 10.10"},
             // new Object[]{"safari", "latest-1", "OS X 10.10"},
             // new Object[]{"safari", "latest-2", "OS X 10.10"},
             //
-            // new Object[]{"chrome", "latest", "OS X 10.11"},
+            new Object[]{"chrome", "latest", "OS X 10.11"},
             new Object[]{"chrome", "latest-1", "OS X 10.11"},
-            // new Object[]{"chrome", "latest", "OS X 10.10"},
+            new Object[]{"chrome", "latest", "OS X 10.10"},
             // new Object[]{"chrome", "latest-1", "OS X 10.10"},
             //
             // new Object[]{"firefox", "latest", "OS X 10.11"},
@@ -140,14 +139,15 @@ public class TestBase {
         capabilities.setCapability("capturePerformance", true);
         // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
-        capabilities.setCapability("build", "v25-TopLevel");
-//        capabilities.setCapability("avoidProxy", true);
+        // capabilities.setCapability("build", "v26-TopLevel3");
+       capabilities.setCapability("avoidProxy", true);
 
         //Getting the build name.
         // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
-        // if (buildTag != null) {
-        //     capabilities.setCapability("build", buildTag);
-        // }
+        if (buildTag != null) {
+            capabilities.setCapability("build", buildTag);
+        }
+
         System.out.println(capabilities);
 
         // Launch remote browser and set it as the current thread

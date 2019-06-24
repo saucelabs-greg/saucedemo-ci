@@ -50,7 +50,7 @@ public class LoginLockedOutUser extends TestBase {
         InventoryPage inventory = page.enterCredentials("locked_out_user", "secret_sauce");
 
         this.annotate("Verify Locked Out User Message...");
-        AssertJUnit.assertTrue(page.verifyLockedOutMessage().contains("Sorry"));
+        AssertJUnit.assertTrue(page.verifyLockedOutMessage().contains("Epic sadface"));
 
     }
 
