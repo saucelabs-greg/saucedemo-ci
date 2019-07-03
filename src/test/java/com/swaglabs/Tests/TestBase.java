@@ -135,12 +135,13 @@ public class TestBase {
         capabilities.setCapability(CapabilityType.VERSION, version);
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
-        capabilities.setCapability("extendedDebugging", true);
-        capabilities.setCapability("capturePerformance", true);
+         capabilities.setCapability("extendedDebugging", true);
+         capabilities.setCapability("capturePerformance", true);
+//         capabilities.setCapability("crmuxdriverVersion", "beta");
         // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
         // capabilities.setCapability("build", "v26-TopLevel3");
-       capabilities.setCapability("avoidProxy", true);
+       // capabilities.setCapability("avoidProxy", true);
 
         //Getting the build name.
         // Using the Jenkins ENV var. You can use your own. If it is not set test will run without a build id.
@@ -155,6 +156,8 @@ public class TestBase {
                 new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"), // Sauce full VMs
                 // new URL("https://" + username + ":" + accesskey + "@ondemand.us-east-1.saucelabs.com/wd/hub"), // Sauce Headless Sessions
                 capabilities));
+
+        // System.out.println("Desired capabilities from SauceLabs are: " + driver.getCapabilities().asMap());
 
         // set current sessionId
         // String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
