@@ -29,6 +29,23 @@ public class TestBase {
 
     public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
 
+    public String osOption = System.getenv("SAUCE_OS_OPTION");
+
+    /**
+     * Options for osOption are:
+     * edgeIEWindows: MS Edge and IE on Windows
+     * safariMac: Safari on Mac
+     * chromeAll: chrome on both Windows and Mac
+     * chromeFireFoxAll: chrome and firefox on both Windows and Mac (default)
+     * fireFoxAll: FireFox on both Windows and Mac
+     * chromeWin: Chrome on Windows
+     * chromeMac: Chrome on Mac
+     * fireFoxWin: FireFox on Windows
+     * fireFoxMac: FireFox on Mac
+     * NOTE: latest three browser versions and latest OS versions are hardcoded
+     * NOTE: if osOption is null, chromeFireFoxAll is the default
+     */
+
     /**
      * ThreadLocal variable which contains the {@link WebDriver} instance which
      * is used to perform browser interactions with.
@@ -51,35 +68,37 @@ public class TestBase {
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
 
+          // if (osOption === "edgeIEWindows"){
             // Windows OS
             // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
-            //
-            // new Object[]{"internet explorer", "11.0", "Windows 7"},
-            //
+            // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
+
+            // new Object[]{"internet explorer", "latest", "Windows 7"},
+          // } else {
+
             new Object[]{"firefox", "latest", "Windows 10"},
             new Object[]{"firefox", "latest-1", "Windows 10"},
-            //
+
             new Object[]{"chrome", "latest", "Windows 10"},
             new Object[]{"chrome", "latest-1", "Windows 10"},
-            //
-            //
-            // // Mac OS
+
+
+            // Mac OS
             // new Object[]{"safari", "latest", "OS X 10.11"},
             // new Object[]{"safari", "latest-1", "OS X 10.11"},
             // new Object[]{"safari", "latest-2", "OS X 10.11"},
-            // //
+
             // new Object[]{"safari", "latest", "OS X 10.10"},
             // new Object[]{"safari", "latest-1", "OS X 10.10"},
             // new Object[]{"safari", "latest-2", "OS X 10.10"},
-            //
+
             new Object[]{"chrome", "latest", "OS X 10.11"},
             new Object[]{"chrome", "latest-1", "OS X 10.11"},
             new Object[]{"chrome", "latest", "OS X 10.10"},
-            // new Object[]{"chrome", "latest-1", "OS X 10.10"},
-            //
-            // new Object[]{"firefox", "latest", "OS X 10.11"},
-
+            new Object[]{"chrome", "latest-1", "OS X 10.10"},
+            new Object[]{"firefox", "latest", "OS X 10.11"},
+          // }
 
             /**
             *** use these when running headless
@@ -135,10 +154,11 @@ public class TestBase {
         capabilities.setCapability(CapabilityType.VERSION, version);
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
+        capabilities.setCapability("recordScreenshots", false);
          capabilities.setCapability("extendedDebugging", true);
          capabilities.setCapability("capturePerformance", true);
 //         capabilities.setCapability("crmuxdriverVersion", "beta");
-        // capabilities.setCapability("tunnelIdentifier", "allTheTesting");
+        // capabilities.setCapability("tunnelIdentifier", ".West1"); //
         // capabilities.setCapability("build", System.getenv("JOB_NAME") + " __ " + System.getenv("BUILD_NUMBER") + " __ " + System.getenv("BUILD_TAG"));
         // capabilities.setCapability("build", "v26-TopLevel3");
        // capabilities.setCapability("avoidProxy", true);
