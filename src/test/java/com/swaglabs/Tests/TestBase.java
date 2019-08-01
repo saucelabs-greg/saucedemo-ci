@@ -154,7 +154,7 @@ public class TestBase {
         capabilities.setCapability(CapabilityType.VERSION, version);
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
-        capabilities.setCapability("recordScreenshots", false);
+        // capabilities.setCapability("recordScreenshots", false);
          capabilities.setCapability("extendedDebugging", true);
          capabilities.setCapability("capturePerformance", true);
 //         capabilities.setCapability("crmuxdriverVersion", "beta");
