@@ -70,11 +70,11 @@ public class TestBase {
 
           // if (osOption === "edgeIEWindows"){
             // Windows OS
-            // new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
 
-            // new Object[]{"internet explorer", "latest", "Windows 7"},
+           new Object[]{"internet explorer", "latest", "Windows 7"},
           // } else {
 
             new Object[]{"firefox", "latest", "Windows 10"},
@@ -85,7 +85,7 @@ public class TestBase {
 
 
             // Mac OS
-            // new Object[]{"safari", "latest", "OS X 10.11"},
+            new Object[]{"safari", "latest", "OS X 10.14"},
             // new Object[]{"safari", "latest-1", "OS X 10.11"},
             // new Object[]{"safari", "latest-2", "OS X 10.11"},
 
@@ -93,11 +93,11 @@ public class TestBase {
             // new Object[]{"safari", "latest-1", "OS X 10.10"},
             // new Object[]{"safari", "latest-2", "OS X 10.10"},
 
-            new Object[]{"chrome", "latest", "OS X 10.11"},
-            new Object[]{"chrome", "latest-1", "OS X 10.11"},
-            new Object[]{"chrome", "latest", "OS X 10.10"},
-            new Object[]{"chrome", "latest-1", "OS X 10.10"},
-            new Object[]{"firefox", "latest", "OS X 10.11"},
+            new Object[]{"chrome", "latest", "OS X 10.13"},
+            new Object[]{"chrome", "latest-1", "OS X 10.13"},
+            new Object[]{"chrome", "latest", "OS X 10.14"},
+            new Object[]{"chrome", "latest-1", "OS X 10.14"},
+          //  new Object[]{"firefox", "latest", "OS X 10.12"},
           // }
 
             /**
