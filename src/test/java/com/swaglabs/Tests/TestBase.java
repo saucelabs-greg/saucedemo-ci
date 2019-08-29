@@ -70,11 +70,11 @@ public class TestBase {
 
           // if (osOption === "edgeIEWindows"){
             // Windows OS
-            new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+      //      new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
             // new Object[]{"MicrosoftEdge", "latest-1", "Windows 10"},
 
-           new Object[]{"internet explorer", "latest", "Windows 7"},
+      //     new Object[]{"internet explorer", "latest", "Windows 7"},
           // } else {
 
             new Object[]{"firefox", "latest", "Windows 10"},
